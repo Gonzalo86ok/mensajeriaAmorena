@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Envíos - Mensajería Amorena</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f3f0ec;
+      color: #333;
+    }
+
+    header {
+      background-color: #f3f0ec;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 130px;
+      margin-right: 25px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      color: #a36c3e;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    .envio-box {
+      background-color: white;
+      border-radius: 10px;
+      max-width: 500px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .envio-box img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .envio-box h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #4d3626;
+    }
+
+    .envio-box p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    .boton {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ddd;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .boton:hover {
+      background-color: #ccc;
+    }
+    .bloque-cotizacion {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .texto-cotizacion {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #333;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    .redes-sociales {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icono-red {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s;
+    }
+
+    .icono-red:hover {
+      transform: scale(1.1);
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="../img/logo.jpg" alt="Logo Amorena" />
+    <div>
+      <strong>MENSAJERÍA</strong><br>AMORENA
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="servicios.html">SERVICIOS</a>
+    <a href="envios.html" class="active">ENVIOS</a>
+    <a href="tarifas.html">TARIFAS</a>
+    <a href="contacto.html">CONTACTO</a>
+  </nav>
+</header>
+
+<main class="contenedor">
+
+  <div class="envio-box">
+    <img src="../img/mensajero-moto.jpg" alt="Envios particulares" />
+    <h2>Envíos particulares</h2>
+    <p>
+      Realizamos entregas personalizadas puerta a puerta dentro de CABA y GBA. 
+      Ideal para clientes que necesitan enviar paquetes, sobres o productos 
+      sin intermediarios. Nuestro equipo se encarga de que tu envío llegue 
+      rápido, seguro y en el mismo día.
+    </p>
+  </div>
+
+  <div class="envio-box">
+    <img src="../img/mensajero-moto.jpg" alt="Logística de paquetería" />
+    <h2>Logística de paquetería</h2>
+    <p>
+      Gestionamos envíos de alto volumen para empresas, tiendas online y comercios. 
+      Recibimos, organizamos y despachamos tus paquetes con seguimiento y control 
+      profesional. Ideal para soluciones de e-commerce, dropshipping y reventa.
+    </p>
+  </div>
+</main>
+<div class="bloque-cotizacion">
+  <p class="texto-cotizacion">COTIZACIÓN</p>
+  <div class="redes-sociales">
+    <a href="https://wa.me/5491136523005" target="_blank">
+      <img src="../img/whatsapp.png" alt="WhatsApp" class="icono-red">
+    </a>
+    <a href="https://www.instagram.com/mensajeria_amorenaaok" target="_blank">
+      <img src="../img/instagram.png" alt="Instagram" class="icono-red">
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

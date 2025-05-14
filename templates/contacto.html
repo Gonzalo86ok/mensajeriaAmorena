@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - Mensajería Amorena</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f3f0ec;
+      color: #333;
+    }
+
+    header {
+      background-color: #f3f0ec;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 130px;
+      margin-right: 25px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      color: #a36c3e;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .info h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .info strong {
+      font-weight: bold;
+    }
+
+    .formulario {
+      flex: 1;
+      min-width: 280px;
+      background-color: transparent;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      background-color: #d7cabe;
+      color: #333;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #333;
+      font-weight: bold;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      align-self: flex-end;
+      padding: 10px 30px;
+      background-color: #d7cabe;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c2b5a8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="../img/logo.jpg" alt="Logo Amorena" />
+    <div>
+      <strong>MENSAJERÍA</strong><br>AMORENA
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="servicios.html">SERVICIOS</a>
+    <a href="envios.html">ENVIOS</a>
+    <a href="tarifas.html">TARIFAS</a>
+    <a href="contacto.html" class="active">CONTACTO</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div class="info">
+    <h1>Contacto</h1>
+    <p><em>Completá el formulario y te escribimos por WhatsApp.</em></p>
+    <p>
+    Si tenés dudas, consultas o querés solicitar un presupuesto personalizado, completá el formulario y te contactamos a la brevedad por WhatsApp. También podés escribirnos directamente haciendo clic en el ícono de WhatsApp al pie de la página.
+    </p>
+    <p><strong>WhatsApp:</strong><br> +54 9 11 3652-3005</p>
+  </div>
+
+  <div class="formulario">
+   <form id="form-contacto">
+    <input type="text" id="nombre" placeholder="NOMBRE" required>
+    <input type="email" id="email" placeholder="E-MAIL" required>
+    <input type="text" id="asunto" placeholder="ASUNTO" required>
+    <textarea id="mensaje" placeholder="MENSAJE" required></textarea>
+    <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+</main>
+    <script>
+    document.getElementById("form-contacto").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const asunto = document.getElementById("asunto").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        const texto = `Hola! Soy ${nombre}%0AEmail: ${email}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+        const numero = "5491136523005";
+        const url = `https://wa.me/${numero}?text=${texto}`;
+
+        window.open(url, '_blank');
+    });
+    </script>
+</body>
+</html>

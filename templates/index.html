@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajería Amorena</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f3f0ec;
+            color: #333;
+        }
+        header {
+            background-color: #f3f0ec;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 130px;
+            margin-right: 25px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .bienvenida {
+            background-image: url('fondo-obelisco.jpg'); /* Reemplazalo con tu fondo real */
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: #000;
+        }
+        .bienvenida p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .info-extra {
+            padding: 30px;
+            text-align: center;
+        }
+        .info-extra p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1em;
+        }
+       .bloque-cotizacion {
+            margin-top: 40px;
+        }
+
+        .texto-cotizacion {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            text-decoration: underline;
+        }
+
+
+        .imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .imagenes img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .redes-sociales {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icono-red {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s;
+        }
+
+        .icono-red:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/logo.jpg" alt="Logo Mensajería Amorena">
+        <div>
+            <strong>MENSAJERÍA</strong><br>
+            AMORENA
+        </div>
+    </div>
+    <nav>
+        <a href="index.html" class="active">INICIO</a>
+        <a href="servicios.html">SERVICIOS</a>
+        <a href="envios.html">ENVIO</a>
+        <a href="tarifas.html">TARIFAS</a>
+        <a href="contacto.html">CONTACTO</a>
+    </nav>
+</header>
+
+<section class="bienvenida">
+    <p>
+        Bienvenido a Mensajería Amorena, tu aliado confiable en servicios logísticos que cubre la Capital Federal y el Gran Buenos Aires. 
+        Con más de 4 años de experiencia, nos enorgullece no solo cumplir, sino superar las expectativas de nuestros clientes. 
+        En Mensajería Amorena, entendemos la importancia de la puntualidad y la eficiencia en cada entrega, brindando un servicio de calidad en el que puedes confiar. 
+        Estamos comprometidos a facilitar tus operaciones logísticas y hacer que cada envío sea una experiencia sin preocupaciones. 
+        ¡Confiá en nosotros para llevar tus entregas al siguiente nivel!
+    </p>
+</section>
+
+<section class="info-extra">
+    <p>
+        Ofrecemos una amplia gama de soluciones que cumplen con rigurosos estándares de seguridad y calidad en todas las etapas de entrega.
+        <br><br>
+        Nuestro alcance abarca CABA y GBA, pero también estamos dispuestos a atender otras ubicaciones fuera de este radio. 
+        No dudes en consultarnos.
+    </p>
+
+    <div class="bloque-cotizacion">
+        <p class="texto-cotizacion">COTIZACIÓN</p>
+    </div>
+
+    <div class="redes-sociales">
+        <a href="https://wa.me/5491136523005" target="_blank">
+            <img src="../img/whatsapp.png" alt="WhatsApp" class="icono-red">
+        </a>
+        <a href="https://www.instagram.com/mensajeria_amorenaaok" target="_blank">
+            <img src="../img/instagram.png" alt="Instagram" class="icono-red">
+        </a>
+    </div>
+
+
+    <div class="imagenes">
+        <img src="../img/paquete1.jpg" alt="Paquetes">
+        <img src="../img/paquete2.jpg" alt="Embalaje">
+        <img src="../img/paquete3.jpg" alt="Entrega">
+    </div>
+</section>
+
+</body>
+</html>

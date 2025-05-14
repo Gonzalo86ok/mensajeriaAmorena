@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarifas - Mensajería Amorena</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f3f0ec;
+      color: #333;
+    }
+
+    header {
+      background-color: #f3f0ec;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 130px;
+      margin-right: 25px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      color: #a36c3e;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contenido {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .contenido h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #3b2a1d;
+    }
+
+    .contenido p {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .tarifas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .tarjeta {
+      background-color: white;
+      border-radius: 10px;
+      max-width: 230px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .tarjeta h3 {
+      margin: 15px 0 5px;
+      font-size: 1.2em;
+      color: #4a3426;
+    }
+
+    .tarjeta p {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 5px 0 15px;
+    }
+
+    .bloque-cotizacion {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .texto-cotizacion {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #333;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    .redes-sociales {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icono-red {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s;
+    }
+
+    .icono-red:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="../img/logo.jpg" alt="Logo Amorena" />
+    <div>
+      <strong>MENSAJERÍA</strong><br>AMORENA
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="servicios.html">SERVICIOS</a>
+    <a href="envios.html">ENVIOS</a>
+    <a href="tarifas.html" class="active">TARIFAS</a>
+    <a href="contacto.html">CONTACTO</a>
+  </nav>
+</header>
+
+<main class="contenido">
+  <h1>TARIFAS PLANAS</h1>
+  <p>
+    Con horario de corte anteriormente pactado y entregas a partir del horario de corte hasta 22hs del mismo día.
+  </p>
+
+  <section class="tarifas-grid">
+    <div class="tarjeta">
+      <img src="../img/caba.png" alt="Zona CABA">
+      <h3>CABA</h3>
+      <p>$3500</p>
+    </div>
+
+    <div class="tarjeta">
+      <img src="../img/caba.png" alt="Cordón 1">
+      <h3>CORDÓN1</h3>
+      <p>$4500</p>
+    </div>
+
+    <div class="tarjeta">
+      <img src="../img/caba.png" alt="Cordón 2">
+      <h3>CORDÓN2</h3>
+      <p>$6500</p>
+    </div>
+
+    <div class="tarjeta">
+      <img src="../img/caba.png" alt="Cordón 3">
+      <h3>CORDÓN3</h3>
+      <p>$7500</p>
+    </div>
+  </section>
+</main>
+<div class="bloque-cotizacion">
+  <p class="texto-cotizacion">COTIZACIÓN</p>
+  <div class="redes-sociales">
+    <a href="https://wa.me/5491136523005" target="_blank">
+      <img src="../img/whatsapp.png" alt="WhatsApp" class="icono-red">
+    </a>
+    <a href="https://www.instagram.com/mensajeria_amorenaaok" target="_blank">
+      <img src="../img/instagram.png" alt="Instagram" class="icono-red">
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
