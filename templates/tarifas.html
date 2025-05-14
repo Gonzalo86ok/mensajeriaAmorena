@@ -18,6 +18,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       border-bottom: 1px solid #ccc;
     }
 
@@ -31,8 +32,14 @@
       margin-right: 25px;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     nav a {
-      margin: 0 15px;
+      margin: 10px 15px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
@@ -75,6 +82,7 @@
       background-color: white;
       border-radius: 10px;
       max-width: 230px;
+      width: 100%;
       padding: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
@@ -126,6 +134,41 @@
 
     .icono-red:hover {
       transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .logo img {
+        height: 100px;
+        margin: 0;
+      }
+
+      .contenido h1 {
+        font-size: 2em;
+      }
+
+      .contenido p {
+        font-size: 0.95em;
+      }
+
+      .tarifa-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tarjeta {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -179,6 +222,7 @@
     </div>
   </section>
 </main>
+
 <div class="bloque-cotizacion">
   <p class="texto-cotizacion">COTIZACIÓN</p>
   <div class="redes-sociales">

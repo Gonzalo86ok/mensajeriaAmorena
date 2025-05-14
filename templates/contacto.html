@@ -18,6 +18,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       border-bottom: 1px solid #ccc;
     }
 
@@ -31,8 +32,14 @@
       margin-right: 25px;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     nav a {
-      margin: 0 15px;
+      margin: 10px 15px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
@@ -118,6 +125,51 @@
     button:hover {
       background-color: #c2b5a8;
     }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .logo img {
+        height: 100px;
+        margin: 0;
+      }
+
+      .container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+      }
+
+      .info p, .info h1 {
+        text-align: center;
+      }
+
+      .formulario {
+        width: 100%;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      input, textarea {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+        align-self: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -144,36 +196,38 @@
     <h1>Contacto</h1>
     <p><em>Completá el formulario y te escribimos por WhatsApp.</em></p>
     <p>
-    Si tenés dudas, consultas o querés solicitar un presupuesto personalizado, completá el formulario y te contactamos a la brevedad por WhatsApp. También podés escribirnos directamente haciendo clic en el ícono de WhatsApp al pie de la página.
+      Si tenés dudas, consultas o querés solicitar un presupuesto personalizado, completá el formulario y te contactamos a la brevedad por WhatsApp. También podés escribirnos directamente haciendo clic en el ícono de WhatsApp al pie de la página.
     </p>
     <p><strong>WhatsApp:</strong><br> +54 9 11 3652-3005</p>
   </div>
 
   <div class="formulario">
-   <form id="form-contacto">
-    <input type="text" id="nombre" placeholder="NOMBRE" required>
-    <input type="email" id="email" placeholder="E-MAIL" required>
-    <input type="text" id="asunto" placeholder="ASUNTO" required>
-    <textarea id="mensaje" placeholder="MENSAJE" required></textarea>
-    <button type="submit">ENVIAR</button>
+    <form id="form-contacto">
+      <input type="text" id="nombre" placeholder="NOMBRE" required>
+      <input type="email" id="email" placeholder="E-MAIL" required>
+      <input type="text" id="asunto" placeholder="ASUNTO" required>
+      <textarea id="mensaje" placeholder="MENSAJE" required></textarea>
+      <button type="submit">ENVIAR</button>
     </form>
   </div>
 </main>
-    <script>
-    document.getElementById("form-contacto").addEventListener("submit", function (e) {
-        e.preventDefault();
 
-        const nombre = document.getElementById("nombre").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const asunto = document.getElementById("asunto").value.trim();
-        const mensaje = document.getElementById("mensaje").value.trim();
+<script>
+  document.getElementById("form-contacto").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const texto = `Hola! Soy ${nombre}%0AEmail: ${email}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
-        const numero = "5491136523005";
-        const url = `https://wa.me/${numero}?text=${texto}`;
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const asunto = document.getElementById("asunto").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
 
-        window.open(url, '_blank');
-    });
-    </script>
+    const texto = `Hola! Soy ${nombre}%0AEmail: ${email}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+    const numero = "5491136523005";
+    const url = `https://wa.me/${numero}?text=${texto}`;
+
+    window.open(url, '_blank');
+  });
+</script>
+
 </body>
 </html>

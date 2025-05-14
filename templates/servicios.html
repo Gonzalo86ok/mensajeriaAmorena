@@ -1,116 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Mensajería Amorena</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f3f0ec;
-            color: #333;
-        }
-        header {
-            background-color: #f3f0ec;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ccc;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 130px;
-            margin-right: 25px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        nav a.active {
-            color: #a36c3e; /* color marrón para marcar la página activa */
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .contenedor {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 40px;
-            align-items: center;
-            justify-content: center;
-        }
-        .contenedor img {
-            width: 400px;
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .contenido-texto {
-            max-width: 500px;
-            margin-left: 40px;
-        }
-        .contenido-texto h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .contenido-texto ul {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-        .contenido-texto ul li {
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .contenido-texto p {
-            font-size: 1em;
-            line-height: 1.5em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios - Mensajería Amorena</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f3f0ec;
+      color: #333;
+    }
+
+    header {
+      background-color: #f3f0ec;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 130px;
+      margin-right: 25px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      margin: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      color: #a36c3e;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .contenedor img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .contenido-texto {
+      max-width: 500px;
+    }
+
+    .contenido-texto h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .contenido-texto ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .contenido-texto ul li {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .contenido-texto p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .logo img {
+        height: 100px;
+        margin: 0;
+      }
+
+      .contenedor {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .contenido-texto h2 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      .contenido-texto ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+      }
+
+      .contenido-texto p {
+        text-align: center;
+        font-size: 0.95em;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="../img/logo.jpg" alt="Logo Amorena"> <!-- Reemplazá con tu logo -->
-        <div>
-            <strong>MENSAJERÍA</strong><br>AMORENA
-        </div>
+  <div class="logo">
+    <img src="../img/logo.jpg" alt="Logo Amorena" />
+    <div>
+      <strong>MENSAJERÍA</strong><br>AMORENA
     </div>
-    <nav>
-        <a href="index.html">INICIO</a>
-        <a href="servicios.html" class="active">SERVICIOS</a>
-        <a href="envios.html">ENVIOS</a>
-        <a href="tarifas.html">TARIFAS</a>
-        <a href="contacto.html">CONTACTO</a>
-    </nav>
+  </div>
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="servicios.html" class="active">SERVICIOS</a>
+    <a href="envios.html">ENVIO</a>
+    <a href="tarifas.html">TARIFAS</a>
+    <a href="contacto.html">CONTACT</a>
+  </nav>
 </header>
 
 <main class="contenedor">
-    <img src="../img/mensajero-moto.jpg" alt="Mensajero en moto"> <!-- Reemplazá con la imagen real -->
-    
-    <div class="contenido-texto">
-        <h2>Tu solución logística integral</h2>
-        <ul>
-            <li>Gestiones bancarias</li>
-            <li>Reparto de correspondencia</li>
-            <li>Paquetería y Encomiendas</li>
-            <li>Agencia marítimas</li>
-            <li>Mercado libre y envíos flex</li>
-            <li>E-COMMERCE</li>
-            <li>Despacho/Encomiendas Nacionales</li>
-            <li>Despachos por transportes a todo el país</li>
-        </ul>
-        <p>
-            Ofrecemos un 21% de descuento a nuestros clientes de Mercado Libre, 
-            brindando soluciones logísticas con tarifas competitivas.
-        </p>
-    </div>
+  <img src="../img/mensajero-moto.jpg" alt="Mensajero en moto"> <!-- Reemplazá si tenés otra imagen -->
+
+  <div class="contenido-texto">
+    <h2>Tu solución logística integral</h2>
+    <ul>
+      <li>Gestiones bancarias</li>
+      <li>Reparto de correspondencia</li>
+      <li>Paquetería y Encomiendas</li>
+      <li>Agencias marítimas</li>
+      <li>Mercado Libre y envíos Flex</li>
+      <li>E-COMMERCE</li>
+      <li>Despachos nacionales</li>
+      <li>Envíos a todo el país</li>
+    </ul>
+    <p>
+      Ofrecemos un 21% de descuento a nuestros clientes de Mercado Libre, 
+      brindando soluciones logísticas con tarifas competitivas.
+    </p>
+  </div>
 </main>
 
 </body>

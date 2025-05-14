@@ -16,8 +16,9 @@
       background-color: #f3f0ec;
       padding: 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       border-bottom: 1px solid #ccc;
     }
 
@@ -31,8 +32,14 @@
       margin-right: 25px;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     nav a {
-      margin: 0 15px;
+      margin: 10px 15px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
@@ -60,6 +67,7 @@
       max-width: 500px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      flex: 1;
     }
 
     .envio-box img {
@@ -79,22 +87,8 @@
       line-height: 1.5em;
     }
 
-    .boton {
-      margin-top: 15px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ddd;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .boton:hover {
-      background-color: #ccc;
-    }
     .bloque-cotizacion {
-      margin-top: 30px;
+      margin: 40px auto;
       text-align: center;
     }
 
@@ -123,7 +117,43 @@
       transform: scale(1.1);
     }
 
-</style>
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .logo img {
+        height: 100px;
+        margin: 0;
+      }
+
+      .contenedor {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .envio-box {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .envio-box h2 {
+        text-align: center;
+      }
+
+      .envio-box p {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -165,7 +195,9 @@
       profesional. Ideal para soluciones de e-commerce, dropshipping y reventa.
     </p>
   </div>
+
 </main>
+
 <div class="bloque-cotizacion">
   <p class="texto-cotizacion">COTIZACIÓN</p>
   <div class="redes-sociales">
