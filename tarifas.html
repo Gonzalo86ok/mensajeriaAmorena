@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Envíos - Mensajería Amorena</title>
+  <title>Tarifas - Mensajería Amorena</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -53,42 +53,61 @@
       text-decoration: underline;
     }
 
-    .contenedor {
+    .contenido {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .contenido h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #3b2a1d;
+    }
+
+    .contenido p {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .tarifas-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 40px 20px;
-      gap: 40px;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 40px;
     }
 
-    .envio-box {
+    .tarjeta {
       background-color: white;
       border-radius: 10px;
-      max-width: 500px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      flex: 1;
-    }
-
-    .envio-box img {
+      max-width: 230px;
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
-    .envio-box h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      color: #4d3626;
+    .tarjeta img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
     }
 
-    .envio-box p {
-      font-size: 1em;
-      line-height: 1.5em;
+    .tarjeta h3 {
+      margin: 15px 0 5px;
+      font-size: 1.2em;
+      color: #4a3426;
+    }
+
+    .tarjeta p {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 5px 0 15px;
     }
 
     .bloque-cotizacion {
-      margin: 40px auto;
+      margin-top: 30px;
       text-align: center;
     }
 
@@ -134,23 +153,21 @@
         margin: 0;
       }
 
-      .contenedor {
+      .contenido h1 {
+        font-size: 2em;
+      }
+
+      .contenido p {
+        font-size: 0.95em;
+      }
+
+      .tarifa-grid {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
       }
 
-      .envio-box {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .envio-box h2 {
-        text-align: center;
-      }
-
-      .envio-box p {
-        text-align: center;
+      .tarjeta {
+        max-width: 90%;
       }
     }
   </style>
@@ -159,7 +176,7 @@
 
 <header>
   <div class="logo">
-    <img src="../img/logo.jpg" alt="Logo Amorena" />
+    <img src="img/logo.jpg" alt="Logo Amorena" />
     <div>
       <strong>MENSAJERÍA</strong><br>AMORENA
     </div>
@@ -167,45 +184,54 @@
   <nav>
     <a href="index.html">INICIO</a>
     <a href="servicios.html">SERVICIOS</a>
-    <a href="envios.html" class="active">ENVIOS</a>
-    <a href="tarifas.html">TARIFAS</a>
+    <a href="envios.html">ENVIOS</a>
+    <a href="tarifas.html" class="active">TARIFAS</a>
     <a href="contacto.html">CONTACTO</a>
   </nav>
 </header>
 
-<main class="contenedor">
+<main class="contenido">
+  <h1>TARIFAS PLANAS</h1>
+  <p>
+    Con horario de corte anteriormente pactado y entregas a partir del horario de corte hasta 22hs del mismo día.
+  </p>
 
-  <div class="envio-box">
-    <img src="../img/mensajero-moto.jpg" alt="Envios particulares" />
-    <h2>Envíos particulares</h2>
-    <p>
-      Realizamos entregas personalizadas puerta a puerta dentro de CABA y GBA. 
-      Ideal para clientes que necesitan enviar paquetes, sobres o productos 
-      sin intermediarios. Nuestro equipo se encarga de que tu envío llegue 
-      rápido, seguro y en el mismo día.
-    </p>
-  </div>
+  <section class="tarifas-grid">
+    <div class="tarjeta">
+      <img src="img/caba.jpg" alt="Zona CABA">
+      <h3>CABA</h3>
+      <p>$4248,99</p>
+    </div>
 
-  <div class="envio-box">
-    <img src="../img/mensajero-moto.jpg" alt="Logística de paquetería" />
-    <h2>Logística de paquetería</h2>
-    <p>
-      Gestionamos envíos de alto volumen para empresas, tiendas online y comercios. 
-      Recibimos, organizamos y despachamos tus paquetes con seguimiento y control 
-      profesional. Ideal para soluciones de e-commerce, dropshipping y reventa.
-    </p>
-  </div>
+    <div class="tarjeta">
+      <img src="img/caba.jpg" alt="Cordón 1">
+      <h3>CORDÓN1</h3>
+      <p>$6791,99</p>
+    </div>
 
+    <div class="tarjeta">
+      <img src="img/caba.jpg" alt="Cordón 2">
+      <h3>CORDÓN2</h3>
+      <p>$9442.99</p>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/caba.jpg" alt="Cordón 3">
+      <h3>CORDÓN3</h3>
+      <p>$9442.99
+      </p>
+    </div>
+  </section>
 </main>
 
 <div class="bloque-cotizacion">
   <p class="texto-cotizacion">COTIZACIÓN</p>
   <div class="redes-sociales">
     <a href="https://wa.me/5491136523005" target="_blank">
-      <img src="../img/whatsapp.png" alt="WhatsApp" class="icono-red">
+      <img src="img/whatsapp.png" alt="WhatsApp" class="icono-red">
     </a>
     <a href="https://www.instagram.com/mensajeria_amorenaaok" target="_blank">
-      <img src="../img/instagram.png" alt="Instagram" class="icono-red">
+      <img src="img/instagram.png" alt="Instagram" class="icono-red">
     </a>
   </div>
 </div>
